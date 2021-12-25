@@ -57,7 +57,7 @@ async function connect() {
 //mongoose.connect('mongodb://localhost/subscribers');
 
 //listen to server
-app.listen(3000, async() => {
+app.listen(process.env.PORT || 3000, async() => {
     console.log(process.env.DB_URL);
     await connect();
 });
